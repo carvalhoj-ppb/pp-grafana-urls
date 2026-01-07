@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Grafana Load Tests URL Builder",
+  "version": "1.0",
+  "description": "Builds a URL with parameters based on user input",
+  "action": {
+    "default_icon": {
+      "1": "pp-grafana.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "1": "pp-grafana.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

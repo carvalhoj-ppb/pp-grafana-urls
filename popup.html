@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>URL Launcher</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="pp-grafana.png" alt="PP Grafana URL Launcher" class="logo" />
+        <span class="title">PP Grafana Launcher</span>
+    </header>
+
+    <section>
+        <h4>Targets</h4>
+        <div class="url-list">
+            <label class="url-item">
+                <input type="checkbox"
+                    value="https://grafana.app.betfair/d/GNy6kzVGk/nodejs?orgId=1&var-downsample=1s&var-tla=smspp&var-cluster=smspp.prd&var-strand=application-context&var-upstream_services=Capi&var-upstream_services=CustomerReadOnly&var-upstream_services=FacetedSportsNavigation-SB&var-upstream_services=UserSharedPreferences" />
+                <span>Application Context</span>
+            </label>
+
+            <label class="url-item">
+                <input type="checkbox"
+                    value="https://grafana.app.betfair/d/GNy6kzVGk/nodejs?orgId=1&var-downsample=1s&var-tla=smspp&var-cluster=smspp.prd&var-strand=pub&var-upstream_services=Capi&var-upstream_services=CustomerReadOnly&var-upstream_services=FacetedSportsNavigation-SB&var-upstream_services=SportsbookMarketPrices&var-upstream_services=LoopExperimentServiceV2" />
+                <span>PUB</span>
+            </label>
+
+            <label class="url-item">
+                <input type="checkbox"
+                    value="https://grafana.app.betfair/d/GNy6kzVGk/nodejs?orgId=1&var-downsample=1s&var-tla=smspp&var-cluster=smspp.prd&var-strand=racing-page&var-upstream_services=CustomerReadOnly&var-upstream_services=FacetedSportsNavigation-SB&var-upstream_services=SportsbookMarketPrices&var-upstream_services=fixedOddsCashoutQuote&var-upstream_services=InplayService&var-upstream_services=FixedOddsBetReporting&refresh=auto" />
+                <span>Racing Page</span>
+            </label>
+
+            <label class="url-item">
+                <input type="checkbox"
+                    value="https://grafana.app.betfair/d/GNy6kzVGk/nodejs?orgId=1&var-downsample=1s&var-tla=smspp&var-cluster=smspp.prd&var-strand=racing-page&var-upstream_services=CustomerReadOnly&var-upstream_services=FacetedSportsNavigation-SB&var-upstream_services=SportsbookMarketPrices&var-upstream_services=fixedOddsCashoutQuote&var-upstream_services=InplayService&var-upstream_services=FixedOddsBetReporting&refresh=auto" />
+                <span>Requests/Errors/Response Time</span>
+            </label>
+            <label class="url-item">
+                <input type="checkbox"
+                    value="https://grafana.app.betfair/d/GNy6kzVGk/nodejs?orgId=1&var-downsample=1s&var-tla=smspp&var-cluster=smspp.prd&var-strand=racing-page&var-upstream_services=CustomerReadOnly&var-upstream_services=FacetedSportsNavigation-SB&var-upstream_services=SportsbookMarketPrices&var-upstream_services=fixedOddsCashoutQuote&var-upstream_services=InplayService&var-upstream_services=FixedOddsBetReporting&refresh=auto" />
+                <span>Content Managed Page</span>
+            </label>
+            <label class="url-item">
+                <input type="checkbox"
+                    value="https://grafana.app.betfair/d/000003569/pp-channels-smspp-strand-drilldrown?orgId=1&var-ie1source=000000001&var-ie2source=000000013&var-op=event-page" />
+                <span>SMSPP Strand drilldrown</span>
+            </label>
+        </div>
+    </section>
+
+    <section>
+        <h4>Parameters</h4>
+        <div class="inputs">
+            <input type="datetime-local" id="from" />
+            <input type="datetime-local" id="to" />
+        </div>
+    </section>
+
+    <button id="open" class="primary">Open URLs</button>
+    <script src="popup.js"></script>
+</body>
+
+</html>
