@@ -1,0 +1,159 @@
+:root {
+  --bg: #0f3d2e;           /* dark green */
+  --card: #145a42;         /* card background */
+  --border: #1e6f55;
+  --text: #ecfdf5;         /* almost white */
+  --muted: #9fd5bf;
+  --accent: #5fbf6f;       /* logo green */
+  --accent-hover: #4faa5f;
+  --grafana: #f59e0b;      /* subtle grafana orange */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  width: 340px;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.logo {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  color: var(--accent);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+/* ---------- Sections ---------- */
+
+h4 {
+  margin: 14px 0 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.6px;
+}
+
+/* ---------- URL Cards ---------- */
+
+.url-list {
+  display: grid;
+  gap: 8px;
+}
+
+.url-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border 0.15s ease;
+}
+
+.url-item:hover {
+  background: #166a4f;
+}
+
+.url-item input {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* ---------- Inputs ---------- */
+
+.inputs {
+  display: grid;
+  gap: 8px;
+}
+
+input[type="datetime-local"] {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: var(--grafana);
+}
+
+/* ---------- Button ---------- */
+
+.primary {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #053a26;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.primary:hover {
+  background: var(--accent-hover);
+}
+
+.primary:active {
+  transform: translateY(1px);
+}
+
+/* ---------- Result ---------- */
+
+textarea {
+  margin-top: 10px;
+  width: 100%;
+  height: 90px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 8px;
+  border-radius: 10px;
+  resize: none;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ---------- Scrollbar (Chrome) ---------- */
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
